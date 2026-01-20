@@ -1,0 +1,13 @@
+Package: fishr
+Title: Calculate standard catch metrics for fisheries
+Version: 0.0.0.9000
+Authors@R: 
+    person("Andy", "Teucher", , "andy.teucher@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7840-692X"))
+Description: Description: Provides functions for calculating and analyzing fisheries
+    data, such as Catch Per Unit Effort (CPUE), a fundamental metric in
+    fisheries science.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
