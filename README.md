@@ -22,8 +22,12 @@ devtools::install_github("yourname/fishr")
 
 ## Example usage
 
-\`\`\`{{r example}} library(fishr) cpue(catch = 100, effort = 10)
+``` r
+library(fishr)
+cpue(catch = 100, effort = 10)
+#> [1] 10
 
 # With gear standardization
-
-cpue(catch = 100, effort = 10, gear_factor = 0.5) \`\`\`
+cpue(catch = 100, effort = 10, gear_factor = 0.5)
+#> [1] 5
+```

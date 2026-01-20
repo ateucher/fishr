@@ -33,7 +33,7 @@ devtools::install_github("yourname/fishr")
 
 ## Example usage
 
-```{{r example}}
+```{r example}
 library(fishr)
 cpue(catch = 100, effort = 10)
 
