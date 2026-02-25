@@ -4,11 +4,8 @@
 #'
 #' @param cpue Numeric veccctor of CPUE values
 #' @param area_swept Numeric vector of area swept (e.g., km^2)
-#' @param catch catch value numeric
-#' @param effort effort value numeric
+#' @inheritParams cpue
 #' @param ... arguments passed on to cpue()
-#' @param verbose Logical; print processing info? Default from
-#'   `getOption("fishr.verbose", FALSE)`.
 #'
 #' @returns A numeric vector of biomass index values
 #' @export
