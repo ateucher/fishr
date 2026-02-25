@@ -22,6 +22,8 @@ cpue <- function(
   method = c("ratio", "log"),
   verbose = getOption("fishr.option", default = FALSE)
 ) {
+  validate_numeric_inputs(catch = catch, effort = effort)
+
   method <- match.arg(method)
 
   if (verbose) {
