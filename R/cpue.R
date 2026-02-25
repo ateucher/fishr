@@ -5,7 +5,8 @@
 #' @param catch Numeric vector of catch (e.g., kg)
 #' @param effort Numeric vector of effort (e.g., hours)
 #' @param gear_factor Numeric adjustment for gear standardization (default is 1)
-#' @param verbose Logical, if TRUE prints processing info (default FALSE)
+#' @param verbose Logical; print processing info? Default from
+#'   `getOption("fishr.verbose", FALSE)`.
 #'
 #' @return A numeric vector of CPUE values
 #' @export
@@ -13,7 +14,12 @@
 #' @examples
 #' cpue(100, 10)
 #' cpue(100, 10, gear_factor = 0.5)
-cpue <- function(catch, effort, gear_factor = 1, verbose = FALSE) {
+cpue <- function(
+  catch,
+  effort,
+  gear_factor = 1,
+  verbose = getOption("fishr.option", default = FALSE)
+) {
   if (verbose) {
     message("Processing ", length(catch), " records")
   }
