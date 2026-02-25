@@ -9,7 +9,7 @@ cpue(
   effort,
   gear_factor = 1,
   method = c("ratio", "log"),
-  verbose = getOption("fishr.option", default = FALSE)
+  verbose = getOption("fishr.verbose", default = FALSE)
 )
 }
 \arguments{
