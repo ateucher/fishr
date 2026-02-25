@@ -7,6 +7,8 @@
 #' @param catch catch value numeric
 #' @param effort effort value numeric
 #' @param ... arguments passed on to cpue()
+#' @param verbose Logical; print processing info? Default from
+#'   `getOption("fishr.verbose", FALSE)`.
 #'
 #' @returns A numeric vector of biomass index values
 #' @export
@@ -19,6 +21,7 @@ biomass_index <- function(
   area_swept,
   catch = NULL,
   effort = NULL,
+  verbose = getOption("fishr.verbose", default = FALSE),
   ...
 ) {
   rlang::check_dots_used()
@@ -29,6 +32,10 @@ biomass_index <- function(
 
   if (is.null(cpue)) {
     stop("Must provide either 'cpue' or both 'catch' and 'effort'.")
+  }
+
+  if (verbose) {
+    message("Calculating biomass index for ", length(cpue), " records")
   }
 
   cpue * area_swept

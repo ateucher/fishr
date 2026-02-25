@@ -70,3 +70,15 @@ test_that("cpue warns when catch and effor lengths differ", {
 
   expect_no_warning(cpue(c(100, 200), c(10, 20)))
 })
+
+test_that("cpue uses verbosit when option is set to TRUE", {
+  withr::local_options(fishr.verbose = TRUE)
+
+  expect_snapshot(cpue(100, 10))
+})
+
+test_that("cpue is not verbose when option is FALSE", {
+  withr::local_options(fishr.verbose = FALSE)
+
+  expect_silent(cpue(100, 10))
+})
