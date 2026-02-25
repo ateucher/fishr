@@ -2,10 +2,10 @@
 #'
 #' Calculates CPUE from catch and effort data, with optional gear standardization.
 #'
-#' @param catch Numeric vector of catch (e.g., kg)
-#' @param effort Numeric vector of effort (e.g., hours)
+#' @param catch Numeric vector of catch (e.g., **kg**)
+#' @param effort Numeric vector of effort (e.g., **hours**)
 #' @param gear_factor Numeric adjustment for gear standardization (default is 1)
-#' @param method Character; one of "ratio" or "log"
+#' @param method Character; one of `"ratio"` or `"log"`
 #' @param verbose Logical; print processing info? Default from
 #'   `getOption("fishr.verbose", FALSE)`.
 #'
