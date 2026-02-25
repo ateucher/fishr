@@ -5,6 +5,7 @@
 #' @param catch Numeric vector of catch (e.g., kg)
 #' @param effort Numeric vector of effort (e.g., hours)
 #' @param gear_factor Numeric adjustment for gear standardization (default is 1)
+#' @param method Character; one of "ratio" or "log"
 #' @param verbose Logical; print processing info? Default from
 #'   `getOption("fishr.verbose", FALSE)`.
 #'
@@ -18,13 +19,20 @@ cpue <- function(
   catch,
   effort,
   gear_factor = 1,
+  method = c("ratio", "log"),
   verbose = getOption("fishr.option", default = FALSE)
 ) {
+  method <- match.arg(method)
+
   if (verbose) {
     message("Processing ", length(catch), " records")
   }
 
-  raw_cpue <- catch / effort
+  raw_cpue <- switch(
+    method,
+    ratio = catch / effort,
+    log = log(catch / effort)
+  )
 
   raw_cpue * gear_factor
 }

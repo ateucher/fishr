@@ -8,6 +8,7 @@ cpue(
   catch,
   effort,
   gear_factor = 1,
+  method = c("ratio", "log"),
   verbose = getOption("fishr.option", default = FALSE)
 )
 }
@@ -17,6 +18,8 @@ cpue(
 \item{effort}{Numeric vector of effort (e.g., hours)}
 
 \item{gear_factor}{Numeric adjustment for gear standardization (default is 1)}
+
+\item{method}{Character; one of "ratio" or "log"}
 
 \item{verbose}{Logical; print processing info? Default from
 \code{getOption("fishr.verbose", FALSE)}.}
