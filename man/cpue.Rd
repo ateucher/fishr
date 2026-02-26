@@ -12,7 +12,7 @@ cpue(catch, ...)
 \method{cpue}{numeric}(
   catch,
   effort,
-  gear_factor = 1,
+  gear_type = "nordic_gillnet",
   method = c("ratio", "log"),
   verbose = getOption("fishr.verbose", default = FALSE),
   ...
@@ -20,7 +20,7 @@ cpue(catch, ...)
 
 \method{cpue}{data.frame}(
   catch,
-  gear_factor = 1,
+  gear_type = "nordic_gillnet",
   method = c("ratio", "log"),
   verbose = getOption("fishr.verbose", default = FALSE),
   ...
@@ -36,7 +36,9 @@ cpue(catch, ...)
 
 \item{effort}{Numeric vector of effort (e.g., \strong{hours})}
 
-\item{gear_factor}{Numeric adjustment for gear standardization (default is 1)}
+\item{gear_type}{Character. Gear type used for sampling. Must be one of the
+types in the internal \code{gear_types} table. Defaults to \code{"nordic_gillnet"},
+the standard reference gear (factor = 1.0).}
 
 \item{method}{Character; one of \code{"ratio"} or \code{"log"}}
 
