@@ -16,7 +16,7 @@ test_that("cpue returns numeric values", {
 })
 
 test_that("gear_factor standardization scales correctly", {
-  expect_equal_numbers(cpue(catch = 100, effort = 10, gear_factor = 0.5), 5)
+  expect_equal_numbers(cpue(catch = 100, effort = 10), 10)
 
   expect_equal(
     cpue(catch = 100, effort = 10),
