@@ -26,7 +26,7 @@ biomass_index(
 \code{getOption("fishr.verbose", FALSE)}.}
 
 \item{...}{
-  Arguments passed on to \code{\link[=cpue]{cpue}}
+  Arguments passed on to \code{\link[=cpue.numeric]{cpue.numeric}}
   \describe{
     \item{\code{gear_factor}}{Numeric adjustment for gear standardization (default is 1)}
     \item{\code{method}}{Character; one of \code{"ratio"} or \code{"log"}}
